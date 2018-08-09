@@ -31,9 +31,12 @@ self.navigationItem.title = "Bill Detail"
             totalBill = 75 + (Double((electricityBill?.unitConsumed)!) - 100) * 1.25
             
         }
-        else (){
-            
+        else if (electricityBill?.unitConsumed)! <= 450
+        {
+            totalBill = 262.5 + Double((electricityBill?.unitConsumed)!) * 2.25
         }
+        print(totalBill)
+    }
     }
     
 
@@ -47,4 +50,4 @@ self.navigationItem.title = "Bill Detail"
     }
     */
 
-}
+
