@@ -115,13 +115,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Payment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWZ-wV-4Zh">
-                                <rect key="frame" x="0.0" y="302" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GnT-Sl-U9G">
                                 <rect key="frame" x="106" y="190" width="121" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -161,6 +154,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnTotal:" destination="kuG-JK-EFU" eventType="touchUpInside" id="vCS-lb-f7B"/>
                                     <action selector="btnTotalBill:" destination="kuG-JK-EFU" eventType="touchUpInside" id="ELX-Tg-NRa"/>
                                     <segue destination="cJd-0H-F2n" kind="show" identifier="nv" id="B4F-6Z-AZq"/>
                                 </connections>
@@ -172,11 +166,27 @@
                                     <navigationItem title="ElectricityBill" id="lnh-LD-S6l"/>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Payment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWZ-wV-4Zh">
+                                <rect key="frame" x="0.0" y="302" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f4a-R8-QU5"/>
                     </view>
                     <navigationItem key="navigationItem" id="z7d-eQ-xTa"/>
+                    <connections>
+                        <outlet property="seggend" destination="GnT-Sl-U9G" id="EKc-n0-iVZ"/>
+                        <outlet property="txtBillDate" destination="nwq-ho-hI0" id="abJ-CK-cgC"/>
+                        <outlet property="txtCustid" destination="S6F-Cs-UhM" id="5uk-oa-FEU"/>
+                        <outlet property="txtCustname" destination="8ao-iA-H9p" id="G82-Q4-nkE"/>
+                        <outlet property="txtGender" destination="3TS-Sg-tOW" id="G8T-qk-13Q"/>
+                        <outlet property="txtTotal" destination="CWZ-wV-4Zh" id="qPW-nN-PXO"/>
+                        <outlet property="txtTotalUnit" destination="nWB-Lh-ptp" id="JeZ-Ha-Ozr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hsy-l9-B7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
